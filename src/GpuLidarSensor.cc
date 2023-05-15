@@ -49,10 +49,11 @@ class gz::sensors::GpuLidarSensorPrivate
 
   /// \brief Event that is used to trigger callbacks when a new
   /// lidar frame is available
-  public: gz::common::EventT<
-          void(const float *_scan, unsigned int _width,
-               unsigned int _height, unsigned int _channels,
-               const std::string &_format)> lidarEvent;
+  // public: gz::common::EventT<
+  //         void(const float *_scan, unsigned int _width,
+  //              unsigned int _height, unsigned int _channels,
+  //              const std::string &_format)> lidarEvent;
+  public: gz::sensors::events::LidarEvent lidarEvent;
 
   /// \brief Callback when new lidar frame is received
   public: void OnNewLidarFrame(const float *_scan, unsigned int _width,

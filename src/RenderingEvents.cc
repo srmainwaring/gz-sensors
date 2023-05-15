@@ -19,7 +19,9 @@
 
 using namespace gz::sensors;
 
-gz::common::EventT<void(const gz::rendering::ScenePtr &)>
+// gz::common::EventT<void(const gz::rendering::ScenePtr &)>
+// RenderingEvents::sceneEvent;
+gz::sensors::events::SceneEvent
 RenderingEvents::sceneEvent;
 
 /////////////////////////////////////////////////

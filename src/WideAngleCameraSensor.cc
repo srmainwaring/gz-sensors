@@ -81,8 +81,9 @@ class gz::sensors::WideAngleCameraSensorPrivate
 
   /// \brief Event that is used to trigger callbacks when a new image
   /// is generated
-  public: gz::common::EventT<
-          void(const gz::msgs::Image &)> imageEvent;
+  // public: gz::common::EventT<
+  //         void(const gz::msgs::Image &)> imageEvent;
+  public: gz::sensors::events::ImageEvent imageEvent;
 
   /// \brief Connection from wide angle camera with image data
   public: gz::common::ConnectionPtr imageConnection;

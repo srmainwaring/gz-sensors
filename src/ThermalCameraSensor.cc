@@ -89,8 +89,9 @@ class gz::sensors::ThermalCameraSensorPrivate
 
   /// \brief Event that is used to trigger callbacks when a new image
   /// is generated
-  public: gz::common::EventT<
-          void(const gz::msgs::Image &)> imageEvent;
+  // public: gz::common::EventT<
+  //         void(const gz::msgs::Image &)> imageEvent;
+  public: gz::sensors::events::ImageEvent imageEvent;
 
   /// \brief Connection from thermal camera with thermal data
   public: gz::common::ConnectionPtr thermalConnection;
